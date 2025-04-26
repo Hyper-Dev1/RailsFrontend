@@ -1,0 +1,68 @@
+@import 'variables';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  line-height: 1.5;
+  background-color: $secondary-color;
+}
+
+.container {
+  @apply mx-auto px-4;
+  max-width: 1280px;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md transition-all duration-300;
+  
+  &-primary {
+    background-color: $primary-color;
+    color: $white;
+    
+    &:hover {
+      @apply brightness-110;
+    }
+  }
+  
+  &-secondary {
+    background-color: $secondary-color;
+    color: $primary-color;
+    
+    &:hover {
+      @apply brightness-95;
+    }
+  }
+}
+
+.nav-link {
+  @apply px-3 py-2 rounded-md transition-all duration-300;
+  
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+  }
+  
+  &.active {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.card {
+  @apply bg-white/50 rounded-lg shadow-md p-6;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-white;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.feature-card {
+  @apply bg-white/70 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300;
+}
